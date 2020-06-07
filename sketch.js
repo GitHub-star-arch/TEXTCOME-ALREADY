@@ -1,6 +1,15 @@
 var database;
 var form,player,game,gameState=0,playerCount, allPlayers;
 var car1, car2, car3, car4, cars;
+var c1i,c2i,c3i,c4i, trasck;
+
+function preload() {
+  c1i = loadImage('image/car1.png');
+  c2i = loadImage('image/car2.png');
+  c3i = loadImage('image/car3.png');
+  c4i = loadImage('image/car4.png');
+  trasck = loadImage('image/track.jpg');
+}
 
 function setup(){
   database = firebase.database();
