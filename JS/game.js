@@ -37,6 +37,7 @@ class Game {
         //textSize(30);
         //text("gameStart",120,100);
         Player.playerInfo();
+        player.readRank();
         image(trasck,0,-displayHeight*4,displayWidth,displayHeight*5)
         if (allPlayers!== undefined) {
             var index = 0, x=275, y;
@@ -69,9 +70,16 @@ class Game {
             player.distance+= 10;
             player.update();
         }
-        drawSprites();
         if (player.distance>5300) {
             gameState = 2;
+            player.Rank+=1
+            Player.updateRank(player.Rank);
+            stroke("red");
+            textSize(10);
+            fill("red");
+            text("playerRank:"+player.Rank,displayWidth/2-100,displayHeight-allPlayers[plar].distance-100);
+            console.log(player.Rank);
         }
+        drawSprites();
     }
 }

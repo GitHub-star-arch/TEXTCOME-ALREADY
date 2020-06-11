@@ -18,6 +18,7 @@ class Form {
             this.buttonn.hide();
             game.update(0);
             player.updateCount(0);
+            Player.updateRank(0);
         });
         this.button.mousePressed(()=>{
             this.input.hide();
